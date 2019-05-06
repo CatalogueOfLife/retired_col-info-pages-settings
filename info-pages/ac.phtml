@@ -1,0 +1,126 @@
+<?php
+/**
+ * Annual Checklist Interface
+ *
+ * ac.phtml
+ * Info - Annual Checklist page view
+ *
+ * @category    ACI
+ * @package     application
+ * @subpackage  views/scripts
+ *
+ */
+?>
+<div class="page_header">
+<?php
+printf($this->translate('Info_annual_checklist'), $this->app->edition);
+?>
+</div>
+<?php
+echo $this->navigator_top;
+$fcImgAlt = $this->app->edition . ' Annual Checklist DVD front cover';
+?>
+<div class="info_content">
+<p style="margin-bottom: 20px;">
+
+<span style="width: 325px; float: right; padding-left: 5px; margin-left: 5px; margin-bottom: 15px;"><img
+    src="../images/dvd_front_cover.jpg"
+    title="2012 Annual Checklist DVD front cover"
+    alt="2011 Annual Checklist DVD front cover" width="317"
+    height="317" class="bordered-img" /><br />
+</span>
+
+This release of the Catalogue of Life contains contributions from <b><?php echo $this->stats['databases']-1; ?></b> taxonomic databases with information on <b><?php echo $this->stats['species']; ?></b>  species, <b><?php echo $this->stats['infraspecific_taxa']; ?></b> infraspecific taxa which belong to <b>184,526</b> genera, <b>12,267</b> families, <b>1,643</b> orders, <b>387</b> classes, <b>104</b> phyla and <b>7</b> kingdoms plus viruses, it also includes <b><?php echo $this->stats['synonyms']; ?></b> synonyms and <b><?php echo $this->stats['common_names']; ?></b> common names, and covering the following groups:
+
+<p><b class="field_header">Viruses</b>
+ &#8226; <?php
+echo $this->internalLink('Viruses and Subviral agents from [link:db:14]');
+?>
+</p>
+<p><b class="field_header">Bacteria</b> and <b class="field_header">Archaea</b> from 
+<?php echo $this->internalLink('[link:db:115]'); ?>
+</p>
+<p><b class="field_header">Chromista</b>
+ &#8226; <?php echo $this->internalLink('Chromistan fungi from [link:db:28]');?>
+ &#8226; <?php echo $this->internalLink('Foraminifers from [link:db:157]'); ?>
+</p>
+<p><b class="field_header">Protozoa</b>
+ &#8226; <?php echo $this->internalLink('Major groups from [link:db:17]'); ?>
+ &#8226; <?php echo $this->internalLink('Ciliates from [link:db:113]'); ?>
+ &#8226; <?php echo $this->internalLink('Polycystines from [link:db:109]'); ?>
+ &#8226; <?php echo $this->internalLink('Protozoan fungi from [link:db:28] and [link:db:33]'); ?>
+ &#8226; <?php echo $this->internalLink('Microsporidians from [link:db:148]'); ?>
+ &#8226; <?php echo $this->internalLink('Slime moulds from [link:db:53]'); ?>
+</p>
+<p><b class="field_header">Fungi</b>
+ &#8226; <?php echo $this->internalLink('Various groups in whole or in part from [link:db:28], [link:db:23], [link:db:25], [link:db:97], [link:db:38] and from four other databases covering [link:db:36], [link:db:12], [link:db:33],  [link:db:98]'); ?> 
+ &#8226; <?php echo $this->internalLink('Lichens from [link:db:79]'); ?>
+</p>
+<p><b class="field_header">Plantae (Plants)</b>
+ &#8226; <?php echo $this->internalLink('Mosses from [link:db:19]'); ?>
+ &#8226; <?php echo $this->internalLink('Liverworts and hornworts from [link:db:74]'); ?>
+ &#8226; <?php echo $this->internalLink('Ferns and fern-allies from [link:db:140]'); ?> 
+ &#8226; <?php echo $this->internalLink('Cycads from [link:db:163]'); ?> 
+ &#8226; <?php echo $this->internalLink('Conifers from [link:db:45]'); ?>
+ &#8226; <?php echo $this->internalLink('113 flowering plant families from [link:db:24] and 294 families from [link:db:141]'); ?>
+ &#8226; <?php echo $this->internalLink('Plus individual flowering plant families from [link:db:40], [link:db:73], [link:db:66], [link:db:15], [link:db:162], [link:db:48]'); ?>.</p>
+
+<p><b class="field_header">Animalia (Animals)</b>
+ &#8226; <?php echo $this->internalLink('Marine groups from [link:db:115], [link:db:9], [link:db:57], [link:db:104], [link:db:194], [link:db:178], [link:db:186], [link:db:95], [link:db:86], [link:db:87], [link:db:108], [link:db:81], [link:db:154], [link:db:179], [link:db:127], [link:db:132], [link:db:191], [link:db:195], [link:db:180], [link:db:181], [link:db:58], [link:db:106], [link:db:157], [link:db:122], [link:db:125], [link:db:176], [link:db:107], [link:db:112], [link:db:94], [link:db:153], [link:db:105], [link:db:182], [link:db:152], [link:db:200], [link:db:130], [link:db:126], [link:db:88], [link:db:129], [link:db:85], [link:db:131], [link:db:99], [link:db:59], [link:db:149], [link:db:175], [link:db:123], [link:db:90], [link:db:109], [link:db:44], [link:db:124], [link:db:183], [link:db:91], [link:db:150], [link:db:196], [link:db:188], [link:db:184], [link:db:110], [link:db:92], [link:db:185], [link:db:93], [link:db:128], [link:db:193], [link:db:100], [link:db:197], [link:db:202]'); ?>
+ &#8226; <?php echo $this->internalLink('Rotifers, mayflies, freshwater  hairworms, planarians, water fleas and aquatic mites from FADA databases: [link:db:47], [link:db:120], [link:db:119], [link:db:138] &amp; [link:db:139]'); ?>
+ &#8226; <?php echo $this->internalLink('Entoprocts, water bears from [link:db:115]'); ?>
+ &#8226; <?php echo $this->internalLink('Spiders, scorpions, ticks &amp; mites from [link:db:29], [link:db:164], [link:db:115], [link:db:30], [link:db:82] [link:db:80] &amp; Mites GSDs: [link:db:63], [link:db:70], [link:db:69] &amp; [link:db:78]'); ?>
+ &#8226; <?php echo $this->internalLink('Centipedes from [link:db:42]'); ?>
+ &#8226; <?php echo $this->internalLink('Dragonflies and damselflies from [link:db:20] database'); ?>
+ &#8226; <?php echo $this->internalLink('Stoneflies from [link:db:65]'); ?>
+ &#8226; <?php echo $this->internalLink('Cockroaches from [link:db:51]'); ?>
+ &#8226; <?php echo $this->internalLink('Termites from [link:db:198]'); ?>
+ &#8226; <?php echo $this->internalLink('Praying mantids from [link:db:62]'); ?>
+ &#8226; <?php echo $this->internalLink('Stick and leaf insects from [link:db:50]'); ?>
+ &#8226; <?php echo $this->internalLink('Ice crawlers from [link:db:170]'); ?>
+ &#8226; <?php echo $this->internalLink('Earwigs from [link:db:158]'); ?>
+ &#8226; <?php echo $this->internalLink('Grasshoppers, locusts, katydids and crickets from [link:db:21]'); ?>
+ &#8226; <?php echo $this->internalLink('Rock crawlers, gladiators from [link:db:168]'); ?>
+ &#8226; <?php echo $this->internalLink('Webspinners from [link:db:89]'); ?>
+ &#8226; <?php echo $this->internalLink('Zorapterans from [link:db:167]'); ?>
+ &#8226; <?php echo $this->internalLink('Bark & parasitic lices from [link:db:133]'); ?>
+ &#8226; <?php echo $this->internalLink('Thrips from [link:db:203]'); ?>
+ &#8226; <?php echo $this->internalLink('Some groups of true bugs from [link:db:26], [link:db:11], [link:db:52], [link:db:54], [link:db:61], [link:db:76], [link:db:192], [link:db:189], [link:db:96], [link:db:134], [link:db:142], [link:db:143], [link:db:144], [link:db:171] &amp; [link:db:173]'); ?> 
+ &#8226; <?php echo $this->internalLink('Twisted-wing parasites from [link:db:103] '); ?>
+ &#8226; <?php echo $this->internalLink('Lacewings, antlions, owlflies, fishflies, dobsonflies & snakeflies from [link:db:55]'); ?>
+ &#8226; <?php echo $this->internalLink('Some beetle groups from the [link:db:27], [link:db:32], [link:db:39], [link:db:161], [link:db:166], [link:db:146], [link:db:190], [link:db:204] &amp; [link:db:115]'); ?>
+ &#8226; <?php echo $this->internalLink('Fleas from [link:db:22]'); ?>
+ &#8226; <?php echo $this->internalLink('Flies, mosquitoes, bots, midges and gnats from [link:db:101], [link:db:5] & [link:db:6]'); ?>
+ &#8226; <?php echo $this->internalLink('Butterflies and moths from [link:db:18], [link:db:46], [link:db:31], [link:db:49], [link:db:172], [link:db:199]'); ?>
+ &#8226; <?php echo $this->internalLink('Bees &amp; wasps from [link:db:67], [link:db:68], [link:db:34], [link:db:37], [link:db:118] &amp; [link:db:169]'); ?> 
+ &#8226; <?php echo $this->internalLink('Fishes from [link:db:10]'); ?>
+ &#8226; <?php echo $this->internalLink('Reptiles from [link:db:8]'); ?>
+ &#8226; <?php echo $this->internalLink('Amphibians, birds and mammals from [link:db:115]'); ?>
+</p>
+<p><span class="field_header">PLUS</span> additional species of various taxa from
+<?php echo $this->internalLink('[link:db:17], [link:db:75], [link:db:121], extinct taxa from [link:db:174] & [link:db:201], and missing parts of the classification down to genus level from [link:db:501]'); ?>
+</p>
+<br />
+<p class="field_header">The Catalogue of Life Editors</p>
+<p>The Catalogue of Life combines the outputs of the Species 2000 and the ITIS programmes. Assembly and publication of the Catalogue of Life is managed by Yuri Roskov in Champaign, working with colleagues around the world.</p>
+<p>&#8226; <b><em>Yuri Roskov</em></b>, Catalogue of Life Executive Editor at 
+the Species 2000 Office in Species File Group, Illinois Natural History Survey, 
+University of Illinois, Champaign IL, USA.</p>
+<p>&#8226; <b><em>Geoff Ower</em></b>, Catalogue of Life Database Manager at the Species 2000 Office in Species File Group, Illinois Natural History Survey, 
+University of Illinois, Champaign IL, USA.</p>
+<p>&#8226; <b><em>Thomas Orrell</em></b>, ITIS Deputy Director, ITIS Secretariat, Smithsonian Institution, Washington DC, USA.</p>
+<p>&#8226; <b><em>David Nicolson</em></b>, ITIS Data Development Leader, USGS, Smithsonian Institution, Washington DC, USA.</p>
+<p>&#8226; <b><em>Nicolas Bailly</em></b>, Taxonomic Editorial Advisor for Marine sectors at Hellenic Centre for Marine Research, Heraklion, Crete, Greece.</p> 
+<p>&#8226; <b><em>Paul Kirk</em></b>, Taxonomic Editorial Advisor for Fungi and Chromista sectors at the Royal Botanic Gardens, Kew, Richmond, UK.</p>
+<p>&#8226; <b><em>Thierry Bourgoin</em></b>, Taxonomic Editorial Advisor for Insects at the Museum National d'Histoire Naturelle, Paris, France.</p>
+<p>&#8226; <b><em>Edward DeWalt</em></b>, Taxonomic Editorial Advisor for Aquatic Insects at the Illinois Natural History Survey, University of Illinois, Champaign IL, USA.</p>
+<p>&#8226; <b><em>Wim Decock</em></b>, Taxonomic Editorial Advisor for marine taxa (WoRMS) at the Flanders Marine Data Centre, VLIZ, Oostende, Belgium</p>
+<p>&#8226; <b><em>Erik van Nieukerken</em></b>, Taxonomic Editorial Advisor for lepidopteran taxa at the Naturalis Biodiversity Center, Leiden, the Netherlands.</p>
+<p>&#8226; <b><em>James Zarucchi</em></b>, Taxonomic Editorial Advisor for vascular plants at the Missouri Botanical Garden, St. Louis MO, USA.</p>
+<p>&#8226; <b><em>Lyubomir Penev</em></b>, Advisor for editorial and publishing logistics at Pensoft Publishers, Sofia, Bulgaria.</p>
+
+<br/>
+<p class="field_header">Photo on the cover:</p>
+<p>Rove beetle <i>Platydracus maculosus</i> from Iowa, USA, 30th April 2013 by &copy;Evan Sowder.</p>
+</div>
+<?php echo $this->navigator_bottom; ?>

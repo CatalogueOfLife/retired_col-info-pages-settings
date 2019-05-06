@@ -1,0 +1,133 @@
+<?php
+/**
+ * Annual Checklist Interface
+ *
+ * hierarchy.phtml
+ * Info - Towards a management hierarchy page view
+ *
+ * @category    ACI
+ * @package     application
+ * @subpackage  views/scripts
+ *
+ */
+?>
+<div class="page_header">
+<?php echo $this->translate('Management_hierarchy') ?>
+</div>
+<?php echo $this->navigator_top; ?>
+<div class="info_content justified">
+
+
+<div class="center" style="margin-top: 3em">
+<p class="formheader1">Classification</p>
+</div>
+
+<p>The usability of the Catalogue of Life is dependent on the underlying management classification for unification and simplification. The biological classification systems of different kingdoms follow different Codes and nomenclatural practices, in addition some have alternative classifications within kingdoms. The end user of the Catalogue of Life is generally not an expert in taxonomy so to present multiple taxonomies from which to choose one, would decrease the usability of the Catalogue for one very large user group (although it may improve it for another!). So the management classification, by using a single taxonomy brings all taxa across all kingdoms into a coherent master view, and where possible enforces consistent nomenclature. To place a global species database within the Catalogue of Life a specific set of adjustments may need to be decided upon by the editors on where and how to insert it, to make it as consistent as possible, while not losing the essential taxonomic information it has been created to provide.</p>
+
+<center>
+<img src="../images/Mclassification.gif" alt="Management Classification" width="70%">
+
+<p><i>The Catalogue of Life retains the GSD's own classification below points of connection and uses the management classification above.</i></p>
+</center>
+
+<p>When a simplification occurs - for example using the management classification above a GSD connection point (see picture above) or removal of ranks not recognised by the Catalogue of Life - it is done with the knowledge that the Catalogue of Life links every species to its source database, where a full classification and often extra, associated data can be found by the user.</p>
+
+<div style="width: 100%; text-align: right"><i>Ryanne Matthias
+<br>Catalogue of Life Publicity Manager (2012-2013), the University of Reading</i></div>
+
+<div class="center" style="margin-top: 3em"></div>
+<p>The Catalogue of Life Global Team established a panel of experts to recommend a consensus classification to be used for managing the Catalogue of Life database. The panel's establishment originated from a request made in an online essay by Dennis Gordon in 2009 titled, <a href = "http://www.catalogueoflife.org/annual-checklist/2009/info_hierarchy.php"  target = "_blank">Towards a management hierarchy (classification) for the Catalogue of Life</a>. The panel's work led to a published paper in 2015 by Michael A. Ruggiero, Dennis P. Gordon, Thomas M. Orrell, Nicolas Bailly, Thierry Bourgoin, Richard C. Brusca, Thomas Cavalier-Smith, Michael D. Guiry, and Paul M. Kirk, entitled <a href = "http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0119248"  target = "_blank">A Higher level Classification of All Living Organisms</a>. The paper provides a consensus classification that reflects the recommendations of the panel. The classification recognizes two superkingdoms, Eukaryota  and  Prokaryota, and seven kingdoms: Animalia, Archaea, Bacteria, Chromista, Fungi, Plants, and Protozoa. The classification also includes 1,467 orders of living organisms in 351 classes. Where certain taxonomic associations are still unresolved, the panel provides an interim recommendation. The panel also recommends that the classification be reviewed and revised on a five-year cycle.</p>
+
+<p>The Catalogue of Life intends use the recommended higher level classification to organize the many contributing global species databases (GSDs) in the Catalogue of Life. The classification provides the higher level branches to which the top-level GSD taxa can attach. Beyond the Catalogue of Life, the classification can be valuable for other biodiversity efforts and applications that require a consistent and recognized higher level taxonomic classification.</p>
+
+<div style="width: 100%; text-align: right"><i>Michael Ruggiero
+<BR>Research Associate, Smithsonian Institution</i></div>
+
+<a name="estimates"></a>
+<div class="center" style="margin-top: 3em">
+<p class="formheader1">Species estimates</p>
+</div>
+
+<p>The Catalogue of Life (CoL) intends to display the most accurate species estimates available for each taxon in the Tree. Estimated and current included species numbers provide the user with information on the completeness of each taxon in the Catalogue and highlight gaps in its coverage. The work on collecting species estimates is still in progress.</p>
+
+<p>Species estimates should appear in the Tree (option "Browse - Taxonomic Tree" in main menu) after users have ticked a checkbox "Show Statistics" at the top of the Tree window. The estimate follows current species number in the Catalogue:</p>
+
+<img src="../images/Estimates01.png" alt="Estimates in the Tree" width="70%">
+
+<p>where (1) is a taxon, (2) the current number of species in the Catalogue, (3) the estimated number of species, (4) percent completeness calculated by the software, (5) data provider(s), (6) i-balloon with a reference to a source of estimate figure (appearing at the end of each line of the Tree branch when the cursor points there; a click on the i-balloon opens an information window).</p>
+
+<p class="formheader3">What does the species estimate mean?</p>
+
+<p>The CoL "estimate" is the number of living species in each taxon globally which are known to taxonomists at present time. Estimates do not include fossil species.</p>
+
+<p>This is not the same number as that for all species "ever described" through the history of taxonomy. There are many cases where the same species was described more than once under different names, and later experts in taxonomy synonymised these names under just one name, the correct one for that species. Taxonomists have described many more species than are currently recognised at present.</p>
+
+<p>The estimate is also not the same number as that which is predicted by including those species which are awaiting discovery, and thus not yet named.</p>
+
+<p><b><i>The Catalogue of Life estimates 2.2M species on the planet known to taxonomists at present time.</i></b></p>
+
+<p class="formheader3">What are our sources for estimates?</p>
+
+<p>The best source of knowledge on estimates is an expert who is studying the taxonomy of the group and at the same time compiling a GSD (Global Species Database) for the CoL. In this case, both actual number of species and estimate number came from the same expert, and the figures are based on a consistent hypothesis. As soon as a GSD of the taxon is complete and well scrutinised, the estimate figure should be equal to actual number of species in the Catalogue. In the absence of expert opinion from CoL authors, publications by independent authors are used as a source of estimate figures. We will do our best to choose those publications, which are close to the species concepts accepted in the Catalogue.</p>
+
+<p class="formheader3">What does it mean, if the estimate figure is lower than the number of species in the Catalogue?</p>
+
+<p><em>Example:</em></p>
+
+<p style="width: 70%;padding: 1em;border: 1px solid black;background-color: #e2ebfe;font-family: Verdana, "DejaVu Sans", Arial, Helvetica, sans-serif;">Family Gentianaceae <b> &middot; 2,864 of 1,800 est. spp (100%) &middot;</b> World Plants</p>
+
+<p>There are two possible interpretations of this situation:</p>
+
+<ul style="margin-left: 2em;list-style-type: disc">
+  <li style="padding-bottom: 0.5em">the estimate is from an expert who estimates less species than the number from the GSD compilor due to differences in accepted species concepts;</li>
+  <li>the lower estimate is based on accurate expert knowledge, but the GSD in the Catalogue has an imperfect level of taxonomic scrutiny and includes a portion of taxonomically unresolved names.</li>
+</ul>
+
+<p>In both cases, the CoL team will work to further improve the GSD and the accuracy of the estimate figure so that eventually both figures will match.</p>
+
+<div style="width: 100%; text-align: right"><i>Yury Roskov
+<BR>CoL Executive Editor</i></div>
+
+
+<div class="center" style="margin-top: 3em">
+<p class="formheader1">Extinct and fossil species</p>
+</div>
+
+<p>In 2013-2014 the Species 2000 Directors and the Global Team decide to change the CoL policy and expand its coverage to both living (extant) and fossil (extinct) taxa. Since June 2015 the Catalogue includes extinct species in those taxa, where these data are available from the GSD providors.</p>
+
+<p>To be able to see extinct taxa and associated statistics in the Catalogue, users need to tick "Include Extinct Taxa" checkbox in tools for searching and browsing information.</p>
+
+<p>All extinct taxa are identified in the interface with a dagger symbol (&dagger;) preceding the scientific name. Species, which are extinct or have fossilised specimens, are accompanied with appropriate data in the "Current and Past Existence" field on the Species Details page. This field does not appear with living species. Statistics for living and fossil species are calculated and displayed in the interface separately.</p>
+
+<p>A New group of three fields "Current and Past Existence" has been described in the CoL Standard Dataset (version 7, September 2014) and follows a proposal from David Eades. </p>
+
+<p class="formheader3">IsExtinct</p>
+
+<p>This field distinguishes taxa known as presently living (extant), Value: 0 (FALSE), from species which are believed to be no longer living (extinct), Value: 1 (TRUE), or species with unknown status (Value: NULL). </p>
+
+<p class="formheader3">HasPreHolocene</p>
+
+<p>This field indicates whether the taxon is known to have occurred before the Holocene Era (more than 11,700 years ago). Value: 1 (TRUE) if the taxon is known to have occurred before the Holocene era; Value: 0 (FALSE) if this is not the case; Value: NULL if the status is unknown. </p>
+
+<p class="formheader3">HasModern</p>
+
+<p>This field indicates whether the taxon is known to have occurred during the Modern era (less than 11,700 years ago). Value: 1 (TRUE) if the taxon is known to have occurred during the Modern era; Value: 0 (FALSE) if this is not the case; Value: NULL if the status is unknown.</p>
+
+<p>Combination of values in these itemised fields allows to describe</p>
+
+
+<ul style="margin-left: 2em;list-style-type: disc;margin-bottom: 2em">
+  <li style="padding-bottom: 0.5em">extinct species known only as fossilized specimens (IsExtinct = TRUE, HasPreHolocene = TRUE, HasModern = FALSE),</li>
+
+  <li style="padding-bottom: 0.5em">extinct species without fossilized specimens (IsExtinct = TRUE, HasPreHolocene = FALSE, HasModern = FALSE),</li>
+
+  <li style="padding-bottom: 0.5em">living species, also known as fossils (IsExtinct = FALSE, HasPreHolocene = TRUE, HasModern = TRUE) and</li>
+
+  <li>living species without fossilized specimens (IsExtinct = FALSE, HasPreHolocene = FALSE, HasModern = TRUE). </li>
+</ul>
+
+<div style="width: 100%; text-align: right"><i>David Eades
+<BR>Professor Emeritus, Species Files Group</i></div>
+
+</div>
+<?php echo $this->navigator_bottom; ?>

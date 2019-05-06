@@ -1,0 +1,82 @@
+<?php
+/**
+ * Annual Checklist Interface
+ *
+ * totals.phtml
+ * Info - Species totals view
+ *
+ * @category    ACI
+ * @package     application
+ * @subpackage  views/scripts
+ *
+ */
+?>
+<h1 class="page_header">
+<?php echo $this->translate('Species_totals') ?>
+</h1>
+<?php echo $this->navigator_top; ?>
+<div class="info_content">
+
+
+<p>This table presents a known species tally for the phyla represented in the Catalogue of Life. It compares the current numbers in the Catalogue of Life (both, accepted and provisionally accepted species) and the estimated numbers of species recognised by taxonomists at present. The last column displays the completeness of the Catalogue of Life.</p>
+
+<p><i>Hover over the book icon to display the source used for the estimate.</i></p>
+
+
+<table id="species-totals">
+<?php $first = true; ?>
+<?php foreach ($this->results['phyla'] as $kingdom => $phyla): ?>
+    <?php $first ? $padding = '' : $padding = 'padded'; ?>
+    <tr class="<?php echo $padding; ?>">
+        <th><?php echo $this->translate('Taxon'); ?></th>
+        <th class="number"><?php echo $this->fossilsModuleEnabled ? $this->translate('Actual_number_living_in_CoL') : $this->translate('Actual_number_in_CoL'); ?></th>
+        <th class="number"><?php echo $this->translate('Estimated_number'); ?></th>
+        <th></th>
+        <th class="number"><?php echo $this->translate('CoL_completeness'); ?></th>
+    </tr>
+     <tr>
+        <td></td>
+        <td class="no-padding">(<?php echo $this->translate('accepted_and_provisionally_accepted_species'); ?>)</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="5" class="field_header"><?php echo $kingdom; ?></td>
+    </tr>
+    <?php $rowClass = "even" ?>
+    <?php foreach ($phyla as $phylum): ?>
+    <?php $rowClass = ($rowClass == "odd" ? "even" : "odd"); ?>
+    <tr class="<?php echo $rowClass; ?>">
+        <td><?php echo $phylum['name'] ?></td>
+        <td class="number"><?php echo $phylum['actual'] ?></td>
+        <td class="number"><?php echo $phylum['estimate'] ?></td>
+        <td class="icon"><?php echo $phylum['source']; ?></td>
+        <td class="number"><?php echo $phylum['coverage'] ?></td>
+    </tr>
+    <?php endforeach; ?>
+    <!--
+    <?php $rowClass = ($rowClass == "odd" ? "even" : "odd");?>
+    <tr class="tally">
+        <td><?php echo $this->translate('Known_species_tally'); ?></td>
+        <td class="number"><?php echo $this->results['totals'][$kingdom]['actual']; ?></td>
+        <td class="number"><?php echo $this->results['totals'][$kingdom]['estimate']; ?></td>
+        <td></td>
+        <td class="number"><?php echo $this->results['totals'][$kingdom]['coverage']; ?></td>
+    </tr>
+    -->
+    <?php $first = false; ?>
+<?php endforeach ?>
+</table>
+
+
+
+
+
+
+
+
+
+</div>
+<?php
+echo $this->navigator_bottom; ?>

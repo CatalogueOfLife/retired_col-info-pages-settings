@@ -1,0 +1,37 @@
+<?php
+/**
+ * Annual Checklist Interface
+ *
+ * cite.phtml
+ * Info - How to cite this work page view
+ *
+ * @category    ACI
+ * @package     application
+ * @subpackage  views/scripts
+ *
+ */
+?>
+<div class="page_header">
+<?php
+echo $this->translate('Cite_work')?>
+</div>
+<?php
+echo $this->navigator_top;
+?>
+<div class="info_content">
+
+
+<p class="field_header">How to cite the Annual Checklist on the web:</p>
+<p><?php echo $this->credits->annual; ?></p>
+
+<p class="field_header">How to cite the Catalogue of Life monthly edition on the Web:</p>
+<p><?php echo $this->credits->monthly; ?></p>
+
+
+<p class="field_header" style="margin-top: 25px;">How to cite individual databases included in this work:</p>
+<?php echo $this->citations; ?>
+
+</div>
+<?php
+echo $this->navigator_bottom;
+?>

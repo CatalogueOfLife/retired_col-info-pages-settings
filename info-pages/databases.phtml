@@ -1,0 +1,127 @@
+<?php
+/**
+ * Annual Checklist Interface
+ *
+ * databases.phtml
+ * Info - Source databases page view
+ *
+ * @category    ACI
+ * @package     application
+ * @subpackage  views/scripts
+ *
+ */
+?>
+<h1 class="page_header">
+<?php printf($this->translate('Source_databases'), '"' . $this->key . '"')?>
+</h1>
+<?php echo $this->navigator_top; ?>
+<div class="info_content">
+
+
+<p>The data in current edition of the Catalogue of Life have
+been provided by <?php echo $this->stats['databases']-0; ?> resources.
+Most datasets include one or more global
+species database sectors (GSDs), i.e. datasets being developed to cover
+all of the world's species in a particular group of organisms. Several
+datasets provide regional information for groups not yet covered
+globally. The datasets result from collaboration and editing by many
+expert taxonomists, whose names are found in the datasets themselves. A
+brief summary is listed below giving: database name;
+home page address; the author(s) or editor(s); host organisation; the
+group for which data are provided, preceded by its higher
+classification; and the number of species and infraspecific taxa
+included in this checklist.</p>
+<p><i>Database Qualifiers</i><br />
+In the Catalogue of Life we introduce &quot;Database Qualifiers&quot; which shown in the interface. Qualifiers give users a quick guide to the reliability of presented data. Qualifiers have been given by authors/editors of each database and appear on the Database Details page, and alongside, with the database name on each Species Details page. Qualifiers reflect data reliability in the Catalogue of Life only, and are not applicable to the original view of the database through its own website. Qualifiers include:
+<div style="margin-left: 10px;">
+&#8226; Geographic Coverage (values G for &quot;Global&quot; and R for &quot;Regional&quot;)<br />
+&#8226; Taxonomic Completeness (values 1 - 100%)<br />
+&#8226; Checklist Confidence (values <img src='<?php echo $this->baseUrl(); ?>/images/star.png' style='height:10px; width:11;'>&#8212;<img src='<?php echo $this->baseUrl(); ?>/images/star.png' style='height:10px; width:11;'><img src='<?php echo $this->baseUrl(); ?>/images/star.png' style='height:10px; width:11;'><img src='<?php echo $this->baseUrl(); ?>/images/star.png' style='height:10px; width:11;'><img src='<?php echo $this->baseUrl(); ?>/images/star.png' style='height:10px; width:11;'><img src='<?php echo $this->baseUrl(); ?>/images/star.png' style='height:10px; width:11;'>, see below for details)
+</div>
+<div style="margin-left: 30px;"><img src='<?php echo $this->baseUrl(); ?>/images/star.png' style='height:10px; width:11;'> - <I>Caution!</I> This data set does not contain well-scrutinised taxonomic checklist, and in parts may be a list of taxonomically unvetted names only. However, it is used temporarily by the Catalogue of Life to fill major gaps as only available source at the time. See database abstract for more details. <br />
+<img src='<?php echo $this->baseUrl(); ?>/images/star.png' style='height:10px; width:11;'><img src='<?php echo $this->baseUrl(); ?>/images/star.png' style='height:10px; width:11;'> - <I>Caution!</I> This data set is a scrutinised taxonomic checklist, but it is incomplete and at an early stage of its development. See database abstract for more details. <br />
+<img src='<?php echo $this->baseUrl(); ?>/images/star.png' style='height:10px; width:11;'><img src='<?php echo $this->baseUrl(); ?>/images/star.png' style='height:10px; width:11;'><img src='<?php echo $this->baseUrl(); ?>/images/star.png' style='height:10px; width:11;'> - This is a well-scrutinised taxonomic checklist, but it is restricted to a subset of species by geography (regional database), or sector of biological discipline (e.g. thematic database in particular ecological area, conservation, quarantine, pest and disease control, medicine or molecular biology, etc). This data set was included in the Catalogue of Life to fill gaps at lower levels of the taxonomic classification (e.g. species, genera) as temporarily solution. See database abstract for more details.<br />
+<img src='<?php echo $this->baseUrl(); ?>/images/star.png' style='height:10px; width:11;'><img src='<?php echo $this->baseUrl(); ?>/images/star.png' style='height:10px; width:11;'><img src='<?php echo $this->baseUrl(); ?>/images/star.png' style='height:10px; width:11;'><img src='<?php echo $this->baseUrl(); ?>/images/star.png' style='height:10px; width:11;'> - This is a nearly complete and fully scrutinised taxonomic checklist with a good quality of expertise at the current stage of its development.<br />
+<img src='<?php echo $this->baseUrl(); ?>/images/star.png' style='height:10px; width:11;'><img src='<?php echo $this->baseUrl(); ?>/images/star.png' style='height:10px; width:11;'><img src='<?php echo $this->baseUrl(); ?>/images/star.png' style='height:10px; width:11;'><img src='<?php echo $this->baseUrl(); ?>/images/star.png' style='height:10px; width:11;'><img src='<?php echo $this->baseUrl(); ?>/images/star.png' style='height:10px; width:11;'> - This is a complete and fully scrutinised taxonomic checklist for an entire taxon with a high quality of expertise and frequent updates, which covers nearly all known species diversity in the taxon worldwide.
+</div>
+</p>
+
+<br />
+<table>
+<?php
+$rowClass = "odd";
+?>
+    <tr class="even">
+        <th class="horizontal<?php echo ($this->sort == 'source' ? ' current' : '');?>">
+            <a href="<?php echo $this->url(array_merge($this->urlParams, array(
+              'sort' => 'source', 'direction' => $this->sortDesc == 'source' ? 'desc' : 'asc'))); ?>">
+              <?php echo $this->translate('Source_database'); ?></a>
+            <span class="sort-arrow"><?php echo ($this->sort == 'source' ? $this->sortArrow : '');?></span>
+        </th>
+        <th class="horizontal"></th>
+        <th class="horizontal<?php echo ($this->sort == 'group' ? ' current' : '');?>">
+            <a href="<?php echo $this->url(array_merge($this->urlParams, array(
+              'sort' => 'group', 'direction' => $this->sortDesc == 'group' ? 'desc' : 'asc'))); ?>">
+              <?php echo $this->translate('English_name_of_the_group'); ?></a>
+            <span class="sort-arrow"><?php echo ($this->sort == 'group' ? $this->sortArrow : '');?></span>
+        </th>
+        <th class="number horizontal<?php echo ($this->sort == 'extant' ? ' current' : '');?>">
+            <a href="<?php echo $this->url(array_merge($this->urlParams, array(
+              'sort' => 'extant', 'direction' => $this->sortDesc == 'extant' ? 'desc' : 'asc'))); ?>">
+              <?php if ($this->fossilsModuleEnabled) : ?>
+                  <?php echo ucfirst($this->translate('living')) . ' ' . strtolower($this->translate('Species')); ?></a>
+              <?php else : ?>
+                 <?php echo $this->translate('Species'); ?></a>
+              <?php endif; ?>
+            <span class="sort-arrow"><?php echo ($this->sort == 'extant' ? $this->sortArrow : '');?></span>
+        </th>
+        <?php if ($this->fossilsModuleEnabled) : ?>
+             <th class="number horizontal<?php echo ($this->sort == 'extinct' ? ' current' : '');?>">
+                <a href="<?php echo $this->url(array_merge($this->urlParams, array('sort' => 'extinct', 'direction' => $this->sortDesc == 'extinct' ? 'desc' : 'asc'))); ?>">
+                  <?php echo ucfirst($this->translate('extinct')) . ' ' . strtolower($this->translate('Species')); ?></a>
+                <span class="sort-arrow"><?php echo ($this->sort == 'extinct' ? $this->sortArrow : '');?></span>
+            </th>
+        <?php endif; ?>
+
+    </tr>
+<?php foreach ($this->results as $items) : ?>
+    <tr class="<?php echo $rowClass; ?>">
+        <th class="vertical">
+            <a href="<?php echo $this->baseUrl() . $items['url']; ?>">
+                <?php echo $items['name']; ?>
+            </a>
+            <?php if (!empty($items['is_new'])) : ?>
+                <span class="new_big"><?php echo $items['is_new']; ?></span>
+            <?php endif; ?>
+        </th>
+        <td>
+        <?php if ($items['label']) : ?>
+            <a class="wrapLogo tinyImgLink"
+                href="<?php  echo $this->baseUrl() . $items['url']; ?>">
+                <img src="<?php echo $this->baseUrl() . $items['thumb']; ?>"
+                     alt="<?php echo $items['label']; ?>"
+                     title="<?php echo $items['label']; ?>" />
+            </a>
+        <?php endif; ?>
+        </td>
+        <td><?php echo $items['taxa']; ?></td>
+        <td class="number"><?php echo $items['accepted_species_names']; ?></td>
+        <?php if ($this->fossilsModuleEnabled) : ?>
+            <td class="number"><?php echo $items['extinct_species']; ?></td>
+        <?php endif; ?>
+
+    </tr>
+    <?php $rowClass = ($rowClass == 'odd' ? 'even' : 'odd'); ?>
+    <?php endforeach; ?>
+</table>
+
+
+
+
+
+
+
+
+
+</div>
+<?php echo $this->navigator_bottom; ?>
