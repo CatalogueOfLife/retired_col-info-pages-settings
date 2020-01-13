@@ -16,6 +16,12 @@
 printf($this->translate('Info_annual_checklist'), $this->app->edition);
 ?>
 </div>
+<?php
+echo $this->navigator_top;
+$fcImgAlt = $this->app->edition . ' Annual Checklist DVD front cover';
+?>
+<div class="info_content">
+<p style="margin-bottom: 20px;">
 
 This release of the Catalogue of Life contains contributions from <b><?php echo $this->stats['databases']-1; ?></b> taxonomic databases with information on <b><?php echo $this->stats['species']; ?></b>  species, <b><?php echo $this->stats['infraspecific_taxa']; ?></b> infraspecific taxa which belong to <b>184,526</b> genera, <b>12,267</b> families, <b>1,643</b> orders, <b>387</b> classes, <b>104</b> phyla and <b>7</b> kingdoms plus viruses, it also includes <b><?php echo $this->stats['synonyms']; ?></b> synonyms and <b><?php echo $this->stats['common_names']; ?></b> common names, and covering the following groups:
 
