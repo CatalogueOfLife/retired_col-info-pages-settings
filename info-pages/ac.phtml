@@ -16,19 +16,6 @@
 printf($this->translate('Info_annual_checklist'), $this->app->edition);
 ?>
 </div>
-<?php
-echo $this->navigator_top;
-$fcImgAlt = $this->app->edition . ' Annual Checklist DVD front cover';
-?>
-<div class="info_content">
-<p style="margin-bottom: 20px;">
-
-<span style="width: 325px; float: right; padding-left: 5px; margin-left: 5px; margin-bottom: 15px;"><img
-    src="../images/dvd_front_cover.jpg"
-    title="2012 Annual Checklist DVD front cover"
-    alt="2011 Annual Checklist DVD front cover" width="317"
-    height="317" class="bordered-img" /><br />
-</span>
 
 This release of the Catalogue of Life contains contributions from <b><?php echo $this->stats['databases']-1; ?></b> taxonomic databases with information on <b><?php echo $this->stats['species']; ?></b>  species, <b><?php echo $this->stats['infraspecific_taxa']; ?></b> infraspecific taxa which belong to <b>184,526</b> genera, <b>12,267</b> families, <b>1,643</b> orders, <b>387</b> classes, <b>104</b> phyla and <b>7</b> kingdoms plus viruses, it also includes <b><?php echo $this->stats['synonyms']; ?></b> synonyms and <b><?php echo $this->stats['common_names']; ?></b> common names, and covering the following groups:
 
@@ -97,8 +84,7 @@ echo $this->internalLink('Viruses and Subviral agents from [link:db:14]');
  &#8226; <?php echo $this->internalLink('Reptiles from [link:db:8]'); ?>
  &#8226; <?php echo $this->internalLink('Amphibians, birds and mammals from [link:db:115]'); ?>
 </p>
-<p><span class="field_header">PLUS</span> additional species of various taxa from
-<?php echo $this->internalLink('[link:db:17], [link:db:75], [link:db:121], extinct taxa from [link:db:174] & [link:db:201], and missing parts of the classification down to genus level from [link:db:501]'); ?>
+<p><span class="field_header">PLUS</span> additional paleotaxa from [link:db:174] & [link:db:201], and missing parts of the classification down to genus level from [link:db:500]'); ?>
 </p>
 <br />
 <p class="field_header">The Catalogue of Life Editors</p>
@@ -110,17 +96,13 @@ University of Illinois, Champaign IL, USA.</p>
 University of Illinois, Champaign IL, USA.</p>
 <p>&#8226; <b><em>Thomas Orrell</em></b>, ITIS Deputy Director, ITIS Secretariat, Smithsonian Institution, Washington DC, USA.</p>
 <p>&#8226; <b><em>David Nicolson</em></b>, ITIS Data Development Leader, USGS, Smithsonian Institution, Washington DC, USA.</p>
-<p>&#8226; <b><em>Nicolas Bailly</em></b>, Taxonomic Editorial Advisor for Marine sectors at Hellenic Centre for Marine Research, Heraklion, Crete, Greece.</p> 
+<p>&#8226; <b><em>Nicolas Bailly</em></b>, Taxonomic Editorial Advisor for Marine sectors at Q-quatics, Los Baños, Philippines.</p> 
 <p>&#8226; <b><em>Paul Kirk</em></b>, Taxonomic Editorial Advisor for Fungi and Chromista sectors at the Royal Botanic Gardens, Kew, Richmond, UK.</p>
 <p>&#8226; <b><em>Thierry Bourgoin</em></b>, Taxonomic Editorial Advisor for Insects at the Museum National d'Histoire Naturelle, Paris, France.</p>
 <p>&#8226; <b><em>Edward DeWalt</em></b>, Taxonomic Editorial Advisor for Aquatic Insects at the Illinois Natural History Survey, University of Illinois, Champaign IL, USA.</p>
 <p>&#8226; <b><em>Wim Decock</em></b>, Taxonomic Editorial Advisor for marine taxa (WoRMS) at the Flanders Marine Data Centre, VLIZ, Oostende, Belgium</p>
 <p>&#8226; <b><em>Erik van Nieukerken</em></b>, Taxonomic Editorial Advisor for lepidopteran taxa at the Naturalis Biodiversity Center, Leiden, the Netherlands.</p>
-<p>&#8226; <b><em>James Zarucchi</em></b>, Taxonomic Editorial Advisor for vascular plants at the Missouri Botanical Garden, St. Louis MO, USA.</p>
 <p>&#8226; <b><em>Lyubomir Penev</em></b>, Advisor for editorial and publishing logistics at Pensoft Publishers, Sofia, Bulgaria.</p>
 
-<br/>
-<p class="field_header">Photo on the cover:</p>
-<p>Rove beetle <i>Platydracus maculosus</i> from Iowa, USA, 30th April 2013 by &copy;Evan Sowder.</p>
 </div>
 <?php echo $this->navigator_bottom; ?>
